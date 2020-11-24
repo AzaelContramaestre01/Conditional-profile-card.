@@ -71,19 +71,19 @@ window.onload = function() {
     // this is the url of the image that will used as background for the profile cover
     background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
     // this is the url for the profile avatar
-    avatarURL: "https://scontent.fpuq4-1.fna.fbcdn.net/v/t1.0-9/127046183_10224904980434815_1568046556018625513_o.jpg?_nc_cat=111&ccb=2&_nc_sid=09cbfe&_nc_eui2=AeGNrFI0YMcKiYZ8hgUOp1LssvI_mAWiTp-y8j-YBaJOn42sxnNK1C1YDI1TQq6ZQpg&_nc_ohc=mY8yaYLos6kAX_JpFO8&_nc_ht=scontent.fpuq4-1.fna&oh=3c8c8c8cb550a59a18d878e1b21c547e&oe=5FE28757",
+    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
-    twitter: "",
-    github: "",
-    linkedin: "",
-    instagram: "",
-    name: "",
-    lastname: "",
-    role: "",
-    country: "",
-    city: ""
+    twitter: null,
+    github: "alesanchezr",
+    linkedin: null,
+    instagram: null,
+    name: null,
+    lastname: null,
+    role: null,
+    country: null,
+    city: null
   };
   render(window.variables); //render the card for the first time
 
@@ -94,13 +94,13 @@ window.onload = function() {
       let values = {};
       values[attribute] =
         this.value == "" || this.value == "null"
-          ? "null"
+          ? null
           : this.value == "true"
           ? true
           : this.value == "false"
           ? false
           : this.value;
-      render(Object.assign(window.variables, values)); // render again the card with new value
+      render(Object.assign(window.variables, values)); // render again the card with new valus
     });
   });
 };
